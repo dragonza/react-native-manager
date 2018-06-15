@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { View, Text } from 'react-native';
 import { Card, CardSection, Input, Button, Spinner } from './common';
-import { fieldChanged, loginUser } from '../actions';
+import { fieldChanged, loginUser } from '../actions/authen-action';
 
 class LoginForm extends Component {
     renderError() {
-        console.log('this.props.error', this.props.error);
         if (this.props.error) {
             return (
                 <View style={{ backgroundColor: 'white' }}>
